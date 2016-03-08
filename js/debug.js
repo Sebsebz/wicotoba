@@ -1,4 +1,7 @@
 /*global require */
+var gui = require('nw.gui');
+var debug_activated = false;
+var t_i;
 
 var gulp = require('gulp');
 
@@ -30,7 +33,17 @@ gulp.task('css', function () {
     }
 });
 
-gulp.watch(['./css/*.css'], ['css']);
-gulp.watch(['./css/*.scss'], ['scss']);
-gulp.watch(['./js/*.js'], ['js']);
-gulp.watch(['./html/*.html'], ['html']);
+/* Check for debug purpose */
+for (t_i = 0; t_i < gui.App.argv.length; t_i += 1) {
+    if (gui.App.argv[t_i] === 'dev') {
+        debug_activated = true;
+    }
+}
+
+if (debug_activated === true) {
+    gulp.watch(['./css/*.css'], ['css']);
+    gulp.watch(['./css/*.scss'], ['scss']);
+    gulp.watch(['./js/*.js'], ['js']);
+    gulp.watch(['./html/*.html'], ['html']);
+}
+

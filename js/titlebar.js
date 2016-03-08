@@ -8,24 +8,12 @@ var bouton_inspect   = document.querySelector(".titlebar_inspect");
 var bouton_refresh   = document.querySelector(".titlebar_refresh");
 var bouton_draggable = document.querySelector(".titlebar_drag_zone");
 var body_el = document.getElementsByTagName("body")[0];
-var script_el = document.getElementById('dyna_script');
 var maximised;
-var t_i;
 
 /* Init App */
 maximised = false;
 bouton_resize.classList.add("titlebar_resize_A");
 bouton_resize.classList.remove("titlebar_resize_D");
-
-console.log("Argc : " + gui.App.argv.length);
-console.log("Argv : " + gui.App.argv);
-
-/* Check for debug purpose */
-for (t_i = 0; t_i < gui.App.argv.length; t_i += 1) {
-    if (gui.App.argv[t_i] === 'dev') {
-        script_el.innerHTML = "<script src=\"../js/debug.js\"></script>";
-    }
-}
 
 bouton_close.onclick = function () {
     'use strict';
