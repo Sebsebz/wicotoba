@@ -1,0 +1,138 @@
+$colortitlebar: hsl(180, 26%, 30%);
+$colortitlebar_control: hsl(180, 26%, 41%);
+//$colortitlebar_debug: hsl(180, 16%, 15%);
+$colortitlebar_debug: hsl(258, 49%, 37%);
+
+
+body {
+    -webkit-app-region: drag;
+}
+
+.titlebar{
+    background-color: $colortitlebar;
+    height: 25px;
+}
+
+.titlebar_control {
+    height: 25px;
+    width: 35px;
+    float: right;
+    background-color: $colortitlebar;
+    margin-right: 1px;
+    margin-left: 2px;
+    -webkit-app-region: no-drag;
+}
+
+.titlebar_control_debug {
+    background-color: $colortitlebar_debug;
+}
+
+.titlebar_win_ctrl {
+    height: 25px;
+    float: right;
+    margin-right: 1px;
+    margin-left: 1px;
+}
+.titlebar_debug {
+    height: 25px;
+    float: right;
+    padding-left: 5px;
+    padding-right: 5px;
+    background-color: $colortitlebar_debug;
+}
+
+.titlebar_control:hover {
+    background-color: $colortitlebar_control;
+}
+
+.titlebar_close:hover{
+    background-color: #ac0000;
+}
+
+.titlebar_close::before {
+    position: relative;
+    float: right;
+    font-family: icomoon;
+    color:white;
+    content: 'C';
+    height: 15px;
+    font-size: 15px;
+    top:5px;
+    right:10px;
+}
+
+.titlebar_resize::before {
+    position: relative;
+    float: right;
+    font-family: icomoon;
+    color:white;
+    height: 15px;
+    font-size: 15px;
+    top:5px;
+    right:10px;
+}
+
+.titlebar_resize_A::before {
+    position: relative;
+    float: right;
+    font-family: icomoon;
+    color:white;
+    height: 15px;
+    font-size: 15px;
+    top:5px;
+    right:10px;
+    content: 'A';
+}
+
+.titlebar_resize_D::before {
+    position: relative;
+    float: right;
+    font-family: icomoon;
+    color:white;
+    height: 15px;
+    font-size: 15px;
+    top:5px;
+    right:10px;
+    content: 'D';
+}
+
+.titlebar_reduce::before {
+    position: relative;
+    float: right;
+    font-family: icomoon;
+    color:white;
+    content: 'R';
+    height: 15px;
+    font-size: 15px;
+    top:5px;
+    right:10px;
+}
+
+.titlebar_inspect::before {
+    position: relative;
+    float: right;
+    font-family: icomoon;
+    color:white;
+    content: 'i';
+    height: 15px;
+    font-size: 15px;
+    top:5px;
+    right:10px;
+
+}
+
+.inspected{
+    background-color: rgba(172, 172, 0, 0.83);
+}
+
+.titlebar_refresh::before {
+    position: relative;
+    float: right;
+    font-family: icomoon;
+    color:white;
+    content: 'U';
+    height: 15px;
+    font-size: 15px;
+    top:5px;
+    right:10px;
+}
