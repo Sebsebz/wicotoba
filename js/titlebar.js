@@ -41,6 +41,20 @@ win.on('devtools-closed', function () {
     bouton_inspect.classList.remove("inspected");
 });
 
+win.on('maximize', function () {
+    'use strict';
+    maximised = true;
+    bouton_resize.classList.add("titlebar_resize_D");
+    bouton_resize.classList.remove("titlebar_resize_A");
+});
+
+win.on('resize', function () {
+    'use strict';
+    maximised = false;
+    bouton_resize.classList.add("titlebar_resize_A");
+    bouton_resize.classList.remove("titlebar_resize_D");
+});
+
 bouton_resize.onclick = function () {
     'use strict';
     if (maximised === false) {
